@@ -1,0 +1,30 @@
+<h3>List of heroes</h3>
+
+<h3 *ngIf="heroName else nothingdelete"
+>SuperHero delete:<span class="text-danger"> {{heroName}}</span></h3>
+
+<ng-template #nothingdelete>
+<h3>nothing delete</h3>
+</ng-template>
+
+<button class="btn btn-outline-secondary mx-1">
+  te amo maylin
+</button>
+
+
+<button
+  (click)=" removeSuperHero()"
+  *ngIf="heroesList.length > 0"
+ class="btn btn-outline-danger"
+  cli>
+  delete last superhero
+</button>
+
+<ul class="list-group mt-3">
+  <li
+  *ngFor="let hero of heroesList"
+  class="list-group-item">
+  {{hero}}
+  </li>
+
+</ul>
