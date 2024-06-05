@@ -1,0 +1,26 @@
+<h4>Add Character</h4>
+    <form class="row" (ngSubmit)="emitCharacter()">
+      <input
+        name="name"
+        [(ngModel)]="character.name"
+        class="mb-3 form-control"
+        type="text"
+        placeholder="Name"
+        >
+
+      <input
+      [(ngModel)]="character.power"
+      name="power"
+      class="mb-3 form-control"
+      type="text"
+      placeholder="Power"
+      >
+
+
+      <button
+
+      class="btn btn-primary"
+      type="submit">
+      submit
+      </button>
+    </form>
